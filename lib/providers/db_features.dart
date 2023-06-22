@@ -47,7 +47,6 @@ class DBFeatures {
     List<FeaturesModel> fList = response.isNotEmpty
     ? response.map((e) => FeaturesModel.fromJson(e)).toList()
     : [];
-
     return fList;
   }
 }
