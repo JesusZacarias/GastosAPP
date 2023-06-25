@@ -1,5 +1,6 @@
 import 'package:exp_app/pages/balance_page.dart';
 import 'package:exp_app/pages/charts_page.dart';
+import 'package:exp_app/providers/expenses_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -26,11 +27,16 @@ class _HomePage extends StatelessWidget {
 
     final uiProvider = Provider.of<UIProvider>(context);
 
+    //Las Siguientes expreciones son lo mismo
+    // final exProvider = Provider.of<ExpensesProvider>(context, listen: false);
+    final exProvider = context.read<ExpensesProvider>();
+
     final currentIndex = uiProvider.bnbIndex;
 
 
     switch (currentIndex) {
       case 0:
+        exProvider.getAllFeatures();
         return const BalancePage();
       case 1:
         return const ChartsPage();
