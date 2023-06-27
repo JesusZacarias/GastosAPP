@@ -7,6 +7,8 @@ import 'package:exp_app/widgets/add_expenses_wt.dart/create_category.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../../utils/constants.dart';
+
 class BSCategory extends StatefulWidget {
   final CombinedModel cModel;
   const BSCategory({super.key, required this.cModel});
@@ -25,7 +27,7 @@ class _BSCategoryState extends State<BSCategory> {
 
     if (exProvider.fList.isEmpty) {
       for (FeaturesModel e in catList) {
-        exProvider.addNewFeatures(e.category, e.color, e.icon);
+        exProvider.addNewFeatures(e);
       }
     }
 
@@ -164,11 +166,7 @@ class _BSCategoryState extends State<BSCategory> {
     ];
 
     showModalBottomSheet(
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(
-          top: Radius.circular(25.0),
-        ),
-      ),
+      shape: Constants.bottomSheet(),
       isScrollControlled: true,
       context: context,
       builder: (context) {
@@ -184,8 +182,9 @@ class _BSCategoryState extends State<BSCategory> {
 
   _createNewCategory() {
     showModalBottomSheet(
+      shape: Constants.bottomSheet(),
       isScrollControlled: true,
-      isDismissible: true,
+      isDismissible: false,
       context: context,
       builder: (context) => CreateCategory(fModel: fModel),
     );

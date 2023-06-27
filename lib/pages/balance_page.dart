@@ -42,23 +42,23 @@ class _BalancePageState extends State<BalancePage> {
   // Con el siguiente valor de terminamos a que altura se va a ocultar
   // el "Children" que esta encima del stack, entre mayor sea el valor
   // ocultara mas rapido el children de abajo y viceversa.
-  double _alturaOculta = 90;
+  final double _alturaOculta = 90;
   double get _max => max(90 - _offset * _alturaOculta, 0.0);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: CustomFAB(),
+      floatingActionButton: const CustomFAB(),
       body: CustomScrollView(
         controller: _scrollController,
         slivers: [
-          SliverAppBar(
+          const SliverAppBar(
             elevation: 0.0,
             expandedHeight: 120.0,
             flexibleSpace: FlexibleSpaceBar(
               background: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
+                children: [
                   Text(
                     '\$2500.00',
                     style: TextStyle(

@@ -42,11 +42,18 @@ class DBFeatures {
     final response = await db.query('Features'); //retorna como Json
 
     //Condicion ternaria
-    //Si fList mo esta vacia regresa la lista de FeaturesModel
+    //Si fList no esta vacia regresa la lista de FeaturesModel
     //Caso contrario retorna una lista vacia.
     List<FeaturesModel> fList = response.isNotEmpty
     ? response.map((e) => FeaturesModel.fromJson(e)).toList()
     : [];
     return fList;
+  }
+
+  Future<int> updateFeature(FeaturesModel feature) async {
+    final db = await database;
+    final response = db.update('Features', feature.toJson(), 
+    where: 'id = ?', whereArgs: [feature.id],);
+    return response;
   }
 }
