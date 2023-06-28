@@ -38,6 +38,10 @@ flutter_speed_dial
 2.12
 file:///home/yisus_za/.pub-cache/hosted/pub.dev/flutter_speed_dial-6.2.0/
 file:///home/yisus_za/.pub-cache/hosted/pub.dev/flutter_speed_dial-6.2.0/lib/
+fluttertoast
+2.12
+file:///home/yisus_za/.pub-cache/hosted/pub.dev/fluttertoast-8.2.2/
+file:///home/yisus_za/.pub-cache/hosted/pub.dev/fluttertoast-8.2.2/lib/
 intl
 2.12
 file:///home/yisus_za/.pub-cache/hosted/pub.dev/intl-0.18.0/
@@ -134,4 +138,8 @@ flutter_test
 3.0
 file:///home/yisus_za/flutter/packages/flutter_test/
 file:///home/yisus_za/flutter/packages/flutter_test/lib/
+flutter_web_plugins
+3.0
+file:///home/yisus_za/flutter/packages/flutter_web_plugins/
+file:///home/yisus_za/flutter/packages/flutter_web_plugins/lib/
 2

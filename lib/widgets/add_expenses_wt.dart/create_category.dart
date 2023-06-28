@@ -4,6 +4,7 @@ import 'package:exp_app/utils/constants.dart';
 import 'package:exp_app/utils/icon_List.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_material_color_picker/flutter_material_color_picker.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:provider/provider.dart';
 import 'package:exp_app/utils/utils.dart';
 
@@ -16,6 +17,24 @@ class CreateCategory extends StatefulWidget {
 }
 
 class _CreateCategoryState extends State<CreateCategory> {
+  //Variable para determinar si es una
+  //categoria editada(true) o Nueva(false)
+  var hasData = false;
+
+  //Static Category
+  String stcCategory = '';
+
+  @override
+  void initState() {
+    if (widget.fModel.id != null) {
+      //Se captura el valor y no se redibuja
+      stcCategory = widget.fModel.category;
+      hasData = true;
+    }
+    // TODO: implement initState
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     final fList = context.watch<ExpensesProvider>().fList;
@@ -29,15 +48,62 @@ class _CreateCategoryState extends State<CreateCategory> {
 
     _addCategory() {
       if (contain.isNotEmpty) {
-        print('Ya existe la categoria');
-      } else if (widget.fModel.category.isNotEmpty) {
-        exProvider.addNewFeatures(
-          widget.fModel
+        Fluttertoast.showToast(
+          msg: 'Ya existe esta categoria',
+          backgroundColor: Colors.black87,
+          fontSize: 25.0,
+          //Los siguientes valores ya estan predefinidos
+          // toastLength: Toast.LENGTH_SHORT,
+          // textColor: Colors.white,
+          gravity: ToastGravity.CENTER,
         );
+        //print('Ya existe la categoria');
+      } else if (widget.fModel.category.isNotEmpty) {
+        exProvider.addNewFeatures(widget.fModel);
+        Fluttertoast.showToast(msg: 'Categoria guardada',
+          backgroundColor: Colors.black87,
+          fontSize: 25.0,
+          gravity: ToastGravity.CENTER,);
         Navigator.pop(context);
-        print('Procede a guardar');
+        //print('Procede a guardar');
       } else {
-        print('No olvides nombrar una categoria');
+        Fluttertoast.showToast(msg: 'Recuerda nombrar la categoria',
+          backgroundColor: Colors.black87,
+          fontSize: 25.0,
+          gravity: ToastGravity.CENTER,);
+        //print('No olvides nombrar una categoria');
+      }
+    }
+
+    _editCategory() {
+      if (widget.fModel.category.toLowerCase() == stcCategory.toLowerCase()) {
+        exProvider.updateFeatures(widget.fModel);
+        Fluttertoast.showToast(msg: 'Cambios guardados',
+          backgroundColor: Colors.black87,
+          fontSize: 25.0,
+          gravity: ToastGravity.CENTER,);
+        Navigator.pop(context);
+        //print('Procede a guardar sin editar el nombre');
+      } else if (contain.isNotEmpty) {
+        Fluttertoast.showToast(msg: 'Ya existe esta categoria',
+          backgroundColor: Colors.black87,
+          fontSize: 25.0,
+          gravity: ToastGravity.CENTER,);
+        //print('Ya existe la categoria');
+      } else if (widget.fModel.category.isNotEmpty) {
+        exProvider.updateFeatures(widget.fModel);
+        Fluttertoast.showToast(msg: 'Cambios guardados',
+          backgroundColor: Colors.black87,
+          fontSize: 25.0,
+          gravity: ToastGravity.CENTER,);
+        Navigator.pop(context);
+        //print('Procede a editar y guardar');
+      } else {
+        Fluttertoast.showToast(msg: 'Recuerda nombrar la categoria',
+          backgroundColor: Colors.black87,
+          fontSize: 25.0,
+          gravity: ToastGravity.CENTER,);
+        //print('No olvides nombrar una categoria');
       }
     }
 
@@ -48,7 +114,7 @@ class _CreateCategoryState extends State<CreateCategory> {
           children: [
             //Ingresar Nombre de la Categoria
             Container(
-              padding: EdgeInsets.only(bottom: viewInsets),
+              padding: EdgeInsets.only(bottom: viewInsets / 4),
               child: ListTile(
                 trailing: const Icon(
                   Icons.text_fields_outlined,
@@ -90,7 +156,7 @@ class _CreateCategoryState extends State<CreateCategory> {
                 ),
               ),
             ),
-      
+
             //Seleccionar Icon
             ListTile(
               onTap: () => _selectedIcon(),
@@ -112,7 +178,7 @@ class _CreateCategoryState extends State<CreateCategory> {
               ),
             ),
             //Boton para guardar la categoria
-            Row( 
+            Row(
               children: [
                 Expanded(
                   child: GestureDetector(
@@ -123,7 +189,9 @@ class _CreateCategoryState extends State<CreateCategory> {
                 ),
                 Expanded(
                   child: GestureDetector(
-                    onTap: () => _addCategory(),
+                    onTap: () {
+                      (hasData) ? _editCategory() : _addCategory();
+                    },
                     child: Constants.customButtom(
                         Colors.green, Colors.transparent, 'Aceptar'),
                   ),

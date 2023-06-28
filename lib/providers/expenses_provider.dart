@@ -32,6 +32,6 @@ class ExpensesProvider extends ChangeNotifier {
 
   updateFeatures(FeaturesModel features) async {
     await DBFeatures.db.updateFeature(features);
-    notifyListeners();
+    getAllFeatures();
   }
 }

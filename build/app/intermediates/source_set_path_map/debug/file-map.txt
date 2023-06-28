@@ -10,3 +10,5 @@ com.example.exp_app-rs-8 /home/yisus_za/Proyectos/FlutterApp/exp_app/build/app/g
 com.example.exp_app-mergeDebugResources-9 /home/yisus_za/Proyectos/FlutterApp/exp_app/build/app/intermediates/incremental/debug/mergeDebugResources/merged.dir
 com.example.exp_app-mergeDebugResources-10 /home/yisus_za/Proyectos/FlutterApp/exp_app/build/app/intermediates/incremental/debug/mergeDebugResources/stripped.dir
 com.example.exp_app-merged_res-11 /home/yisus_za/Proyectos/FlutterApp/exp_app/build/app/intermediates/merged_res/debug
+com.example.exp_app-packaged_res-12 /home/yisus_za/Proyectos/FlutterApp/exp_app/build/fluttertoast/intermediates/packaged_res/debug
+com.example.exp_app-packaged_res-13 /home/yisus_za/Proyectos/FlutterApp/exp_app/build/sqflite/intermediates/packaged_res/debug

@@ -2,6 +2,7 @@ import 'package:exp_app/models/combined_model.dart';
 import 'package:exp_app/models/features_model.dart';
 import 'package:exp_app/providers/expenses_provider.dart';
 import 'package:exp_app/utils/utils.dart';
+import 'package:exp_app/widgets/add_expenses_wt.dart/admin_category.dart';
 import 'package:exp_app/widgets/add_expenses_wt.dart/category_list.dart';
 import 'package:exp_app/widgets/add_expenses_wt.dart/create_category.dart';
 import 'package:flutter/material.dart';
@@ -161,6 +162,7 @@ class _BSCategoryState extends State<BSCategory> {
         ),
         onTap: () {
           Navigator.pop(context);
+          _adminCategory();
         },
       ),
     ];
@@ -181,12 +183,28 @@ class _BSCategoryState extends State<BSCategory> {
   }
 
   _createNewCategory() {
+    var features = FeaturesModel(
+      id: fModel.id,
+      category: fModel.category,
+      color: fModel.color,
+      icon: fModel.icon,
+    );
     showModalBottomSheet(
       shape: Constants.bottomSheet(),
       isScrollControlled: true,
       isDismissible: false,
       context: context,
-      builder: (context) => CreateCategory(fModel: fModel),
+      builder: (context) => CreateCategory(fModel: features),
+    );
+  }
+
+  _adminCategory() {
+    showModalBottomSheet(
+      shape: Constants.bottomSheet(),
+      isScrollControlled: false,
+      isDismissible: false,
+      context: context,
+      builder: (context) => const AdminCategory(),
     );
   }
 }
