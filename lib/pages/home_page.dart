@@ -24,23 +24,22 @@ class _HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final uiProvider = Provider.of<UIProvider>(context);
-
-    //Las Siguientes expreciones son lo mismo
+    //Las Siguientes 2 expreciones son lo mismo
     // final exProvider = Provider.of<ExpensesProvider>(context, listen: false);
     final exProvider = context.read<ExpensesProvider>();
-
+    
+    final DateTime _date = DateTime.now();
     final currentIndex = uiProvider.bnbIndex;
-
 
     switch (currentIndex) {
       case 0:
+        exProvider.getExpensesByData(_date.month, _date.year);
         exProvider.getAllFeatures();
         return const BalancePage();
       case 1:
         return const ChartsPage();
-      default: 
+      default:
         return const BalancePage();
     }
   }

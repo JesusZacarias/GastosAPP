@@ -88,8 +88,9 @@ class _BSCategoryState extends State<BSCategory> {
   }
 
   _categorySelected(List<FeaturesModel> fList) {
-    void _itemSelected(String category, String color, String icon) {
+    void _itemSelected(String category, String color, String icon, int link) {
       setState(() {
+        widget.cModel.link = link;
         widget.cModel.category = category;
         widget.cModel.color = color;
         widget.cModel.icon = icon;
@@ -123,6 +124,7 @@ class _BSCategoryState extends State<BSCategory> {
                 item.category,
                 item.color,
                 item.icon,
+                item.id!,
               );
             },
           );
