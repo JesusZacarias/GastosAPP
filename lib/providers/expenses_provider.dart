@@ -1,4 +1,7 @@
+import 'dart:convert';
+
 import 'package:exp_app/models/combined_model.dart';
+import 'package:exp_app/models/entries_model.dart';
 import 'package:exp_app/models/expenses_model.dart';
 import 'package:exp_app/models/features_model.dart';
 import 'package:exp_app/providers/db_expenses.dart';
@@ -9,6 +12,7 @@ class ExpensesProvider extends ChangeNotifier {
   List<FeaturesModel> fList = [];
   List<ExpensesModel> eList = [];
   List<CombinedModel> cList = [];
+  List<EntriesModel> enList = [];
 
   /*  Funciones de insertar */
 
@@ -45,6 +49,21 @@ class ExpensesProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  /* Add Entries */
+  addNewEntries(CombinedModel cModel) async {
+    var entries = EntriesModel( 
+        year: cModel.year,
+        month: cModel.month,
+        day: cModel.day,
+        comment: cModel.comment,
+        entries: cModel.amount);
+
+    final id = await DBExpenses.db.addEntries(entries);
+    entries.id = id;
+    enList.add(entries);
+    notifyListeners();
+  }
+
   /*  Funciones para leer */
   getExpensesByData(int month, int year) async {
     final response = await DBExpenses.db.getExpensesByDate(month, year);
@@ -55,6 +74,12 @@ class ExpensesProvider extends ChangeNotifier {
     final response = await DBFeatures.db.getAllFeatures();
     fList = [...response];
     notifyListeners();
+  }
+
+  /*  Get Entries */
+  getEntriesByData(int month, int year) async {
+    final response = await DBExpenses.db.getEntriesByDate(month, year);
+    enList = [...response];
   }
 
   /*  Funcones para actualizar*/
@@ -97,6 +122,7 @@ class ExpensesProvider extends ChangeNotifier {
                 color: y.color,
                 icon: y.icon,
                 id: x.id,
+                link: x.link,
                 amount: x.expenses,
                 comment: x.comment,
                 year: x.year,
@@ -107,6 +133,36 @@ class ExpensesProvider extends ChangeNotifier {
         }
       }
     }
+    return cList = [..._cModel];
+  }
+
+  List<CombinedModel> get groupItemsList {
+    List<CombinedModel> _cModel = [];
+
+    for (var x in eList) {
+      for (var y in fList) {
+        if (x.link == y.id) {
+          double _amount = eList.where((e) => e.link == y.id)
+          .fold(0.0, (a, b) => a + b.expenses);
+          _cModel.add(
+            CombinedModel(
+                category: y.category,
+                color: y.color,
+                icon: y.icon, 
+                amount: _amount,
+                ),
+          );
+        }
+      }
+    }
+    //Enlistamos los elementos de cModel
+    var encode = _cModel.map((e) => jsonEncode(e));
+    // Agrupamos los elementos que sean iguales del cModel gracias al toSet
+    var unique = encode.toSet();
+    var decode = unique.map((e) => jsonDecode(e));
+
+    _cModel = decode.map((e) => CombinedModel.fromJson(e)).toList();
+    print(_cModel ); 
     return cList = [..._cModel];
   }
 }

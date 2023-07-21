@@ -32,7 +32,7 @@ class CommentBox extends StatelessWidget {
               maxLength: 20,
               decoration: InputDecoration(
                 counterText: '',
-                hintText: 'Agregar Coemntario (Opcional)',
+                hintText: 'Agregar Comentario (Opcional)',
                 hintStyle: const TextStyle(
                   fontSize: 18.0,
                 ),

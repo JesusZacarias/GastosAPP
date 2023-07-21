@@ -1,4 +1,8 @@
+import 'package:exp_app/providers/expenses_provider.dart';
+import 'package:exp_app/widgets/balance_page_wt/flayer_categories.dart';
+import 'package:exp_app/widgets/balance_page_wt/flayer_skin.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../../utils/constants.dart';
 
@@ -7,30 +11,63 @@ class FrontSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var _list = List.generate(
-      10,
-      (i) => Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Container(
-          height: 150.0,
-          decoration: BoxDecoration(
-            color: Theme.of(context).primaryColorDark,
-            borderRadius: BorderRadius.circular(30.0),
-          ),
-        ),
-      ),
-    );
+    final eList = context.watch<ExpensesProvider>().eList;
+    bool hasData = false;
+
+    if (eList.isNotEmpty) {
+      hasData = true;
+    }
 
     return Container(
       // height: 850.0,
       decoration: Constants.sheetBoxDecoration(
-          Theme.of(context).scaffoldBackgroundColor,
-        ),
-      child: ListView(
-        shrinkWrap: true,
-        physics: const NeverScrollableScrollPhysics(),
-        children: _list,
+        Theme.of(context).scaffoldBackgroundColor,
       ),
+      child: (hasData)
+          ? ListView(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              children: const [
+                FlayerSkin(
+                    myTitle: "Categoria de Gastos",
+                    myWidget: FlayersCategories()),
+                FlayerSkin(
+                  myTitle: "Frecuencia de Gastos",
+                  myWidget: SizedBox(
+                    height: 150.0,
+                  ),
+                ),
+                FlayerSkin(
+                  myTitle: "Movimientos",
+                  myWidget: SizedBox(
+                    height: 150.0,
+                  ),
+                ),
+                FlayerSkin(
+                  myTitle: "Balance General",
+                  myWidget: SizedBox(
+                    height: 150.0,
+                  ),
+                ),
+              ],
+            )
+          : Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Image.asset('assets/Empty.png'),
+                ),
+                const Text(
+                  'Sin Gastos este mes',
+                  maxLines: 1,
+                  style: TextStyle(
+                    fontSize: 15.0,
+                    letterSpacing: 1.3,
+                  ),
+                ),
+              ],
+            ),
     );
   }
 }

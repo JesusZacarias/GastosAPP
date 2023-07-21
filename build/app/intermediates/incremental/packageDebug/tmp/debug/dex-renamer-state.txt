@@ -1,4 +1,4 @@
-#Sun Jul 09 21:38:31 CST 2023
+#Thu Jul 20 21:46:01 CST 2023
 base.0=/home/yisus_za/Proyectos/FlutterApp/exp_app/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

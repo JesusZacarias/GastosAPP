@@ -1,6 +1,10 @@
+import 'package:exp_app/pages/entries_details.dart';
 import 'package:exp_app/pages/expenses_details.dart';
+import 'package:exp_app/providers/expenses_provider.dart';
+import 'package:exp_app/utils/math_operations.dart';
 import 'package:exp_app/utils/page_animation_routes.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../../utils/constants.dart';
 
@@ -9,6 +13,9 @@ class BackSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final eList = context.watch<ExpensesProvider>().eList;
+    final enList = context.watch<ExpensesProvider>().enList;
+    // ignore: no_leading_underscores_for_local_identifiers
     _headers(String name, String amount, Color color) {
       return Column(
         children: [
@@ -42,7 +49,18 @@ class BackSheet extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          _headers('Ingresos', '\$ 3,500.00', Colors.green),
+          GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    PageAnimationRoutes(
+                        widget: EntriesDetails(), ejex: -0.5, ejey: -0.5));
+              },
+              child: _headers(
+                'Ingresos',
+                getAmountFormat(getSumOfEntrie(enList)),
+                Colors.green,
+              )),
           const VerticalDivider(
             thickness: 2.0,
           ),
@@ -51,15 +69,12 @@ class BackSheet extends StatelessWidget {
               Navigator.push(
                 context,
                 PageAnimationRoutes(
-                  widget:  const ExpensesDetails(),
-                  ejex: 0.5,
-                  ejey: -0.5
-                ),
+                    widget: const ExpensesDetails(), ejex: 0.5, ejey: -0.5),
               );
             },
             child: _headers(
               'Gastos',
-              '\$ 1, 500.00',
+              getAmountFormat(getSumOfExp(eList)),
               Colors.red,
             ),
           )

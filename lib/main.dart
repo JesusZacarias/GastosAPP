@@ -1,3 +1,5 @@
+import 'package:exp_app/pages/add_expenses.dart';
+import 'package:exp_app/pages/categories_details.dart';
 import 'package:exp_app/pages/home_page.dart';
 import 'package:exp_app/providers/expenses_provider.dart';
 import 'package:exp_app/providers/ui_provider.dart';
@@ -58,7 +60,11 @@ class _MyAppState extends State<MyApp> {
           primaryColorDark: Colors.grey[850]),
       routes: {
         'home': (_) => const HomePage(),
+        'add_expenses' : (_) => const AddExpenses(),
+        'cat_details' : (_) => const CategoriesDetails(),
       },
     );
   }
+  /* Pendientes */
+  //Cambiar color del balance cuando sea negativo
 }
