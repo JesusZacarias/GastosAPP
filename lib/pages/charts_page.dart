@@ -1,5 +1,7 @@
 import 'package:exp_app/utils/constants.dart';
 import 'package:exp_app/widgets/charts_page_wt/chart_line.dart';
+import 'package:exp_app/widgets/charts_page_wt/chart_pie.dart';
+import 'package:exp_app/widgets/charts_page_wt/chart_scatterplot.dart';
 import 'package:flutter/material.dart';
 
 class ChartsPage extends StatelessWidget {
@@ -21,7 +23,9 @@ class ChartsPage extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text('Selector'),
-                  Expanded(child: ChartLine()),
+                  // Expanded(child: ChartLine()),
+                  // Expanded(child: ChartPie())
+                  Expanded(child: ChartScatterplot()),
                 ],
               ),
             )),
