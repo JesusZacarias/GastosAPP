@@ -2,6 +2,9 @@ import 'package:exp_app/utils/constants.dart';
 import 'package:exp_app/widgets/charts_page_wt/chart_line.dart';
 import 'package:exp_app/widgets/charts_page_wt/chart_pie.dart';
 import 'package:exp_app/widgets/charts_page_wt/chart_scatterplot.dart';
+import 'package:exp_app/widgets/charts_page_wt/chart_selector.dart';
+import 'package:exp_app/widgets/charts_page_wt/chart_switch.dart';
+import 'package:exp_app/widgets/charts_page_wt/per_day_list.dart';
 import 'package:flutter/material.dart';
 
 class ChartsPage extends StatelessWidget {
@@ -11,10 +14,14 @@ class ChartsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColorDark,
-      appBar: AppBar(title: Text('Grafico'),centerTitle: true, elevation: 0.0,),
+      appBar: AppBar(
+        title: Text('Grafico'),
+        centerTitle: true,
+        elevation: 0.0,
+      ),
       body: CustomScrollView(
         slivers: [
-          SliverAppBar(
+          const SliverAppBar(
             expandedHeight: 350.0,
             flexibleSpace: FlexibleSpaceBar(
                 background: Align(
@@ -22,17 +29,19 @@ class ChartsPage extends StatelessWidget {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text('Selector'),
                   // Expanded(child: ChartLine()),
                   // Expanded(child: ChartPie())
-                  Expanded(child: ChartScatterplot()),
+                  ChartSelector(),
+                  Expanded(
+                    child: ChartSwitch(),
+                  ),
                 ],
               ),
             )),
           ),
           SliverToBoxAdapter(
             child: Container(
-              padding: const EdgeInsets.only(top: 15.0),
+              padding: const EdgeInsets.only(top: 10.0),
               height: 40.0,
               color: Theme.of(context).scaffoldBackgroundColor,
               child: Container(
@@ -42,6 +51,7 @@ class ChartsPage extends StatelessWidget {
               ),
             ),
           ),
+          const PerDayList(),
         ],
       ),
     );
