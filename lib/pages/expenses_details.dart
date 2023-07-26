@@ -24,6 +24,8 @@ class _ExpensesDetailsState extends State<ExpensesDetails> {
   void _listener() {
     setState(() {
       _offset = _scrollController.offset / 100;
+      /*Limitar la posicion del Total*/
+      if (_offset > 0.80) _offset = 0.85;
     });
   }
 
@@ -43,6 +45,8 @@ class _ExpensesDetailsState extends State<ExpensesDetails> {
 
   @override
   Widget build(BuildContext context) {
+    final argDay = ModalRoute.of(context)!.settings.arguments as int?;
+
     final exProvider = context.read<ExpensesProvider>();
     final uiProvider = context.read<UIProvider>();
     cList = context.watch<ExpensesProvider>().allItemsList;
@@ -68,11 +72,15 @@ class _ExpensesDetailsState extends State<ExpensesDetails> {
     // }
 
     double totalExp = 0.0;
+    
+    if(argDay != null) {
+      cList = cList.where((e) => e.day == argDay).toList();
+    }
 
     totalExp = cList.map((e) => e.amount).fold(0.0, (a, b) => a + b);
 
-    /*Limitar la posicion del Total*/
-    if (_offset > 0.80) _offset = 0.85;
+    cList.sort((a, b) => b.day.compareTo(a.day));
+    
 
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColorDark,

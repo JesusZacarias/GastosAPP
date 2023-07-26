@@ -23,11 +23,19 @@ class PerDayList extends StatelessWidget {
     _perDayMap.forEach((day, exp) {
       _perDay.add(CombinedModel(day: day, amount: exp));
     });
+    _perDay.sort((a, b) => b.day.compareTo(a.day));
     return SliverGrid(
-      delegate: SliverChildBuilderDelegate(
-        (context, i) {
-          var item = _perDay[i];
-          return Padding(
+      delegate: SliverChildBuilderDelegate((context, i) {
+        var item = _perDay[i];
+        return GestureDetector(
+          onTap: () {
+            Navigator.pushNamed(
+              context,
+              'exp_details',
+              arguments: item.day,
+            );
+          },
+          child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10.0),
             child: Container(
               decoration: BoxDecoration(
@@ -54,10 +62,9 @@ class PerDayList extends StatelessWidget {
                 ],
               ),
             ),
-          );
-        },
-        childCount: _perDay.length
-      ),
+          ),
+        );
+      }, childCount: _perDay.length),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 3,
         mainAxisSpacing: 15,

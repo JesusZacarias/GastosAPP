@@ -1,21 +1,27 @@
+import 'package:exp_app/providers/ui_provider.dart';
 import 'package:exp_app/utils/constants.dart';
-import 'package:exp_app/widgets/charts_page_wt/chart_line.dart';
-import 'package:exp_app/widgets/charts_page_wt/chart_pie.dart';
-import 'package:exp_app/widgets/charts_page_wt/chart_scatterplot.dart';
 import 'package:exp_app/widgets/charts_page_wt/chart_selector.dart';
 import 'package:exp_app/widgets/charts_page_wt/chart_switch.dart';
+import 'package:exp_app/widgets/charts_page_wt/per_category_list.dart';
 import 'package:exp_app/widgets/charts_page_wt/per_day_list.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class ChartsPage extends StatelessWidget {
   const ChartsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final currentChart = context.watch<UIProvider>().selectedChart;
+    bool _isPerDay = false;
+    if(currentChart == 'Gráfico de Dispersión' 
+    || currentChart == 'Gráfico Lineal') {
+      _isPerDay = true;
+    }
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColorDark,
       appBar: AppBar(
-        title: Text('Grafico'),
+        title: Text(currentChart),
         centerTitle: true,
         elevation: 0.0,
       ),
@@ -51,7 +57,8 @@ class ChartsPage extends StatelessWidget {
               ),
             ),
           ),
-          const PerDayList(),
+          // const PerDayList(),
+           (_isPerDay) ? const PerDayList() : const PerCategoryList()
         ],
       ),
     );
