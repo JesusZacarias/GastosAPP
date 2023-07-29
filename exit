@@ -1,0 +1,79 @@
+[33mcommit 0b135d28580eeecf2dd3f5c1016c589883de4b37[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: YisusZA <jesuszacale11@gmail.com>
+Date:   Tue Jul 25 23:05:21 2023 -0600
+
+    Listado por categorias. de talles por dia y por categoria
+
+[33mcommit 0f2c602941902a367535cf474608b3595128f9be[m
+Author: YisusZA <jesuszacale11@gmail.com>
+Date:   Mon Jul 24 21:20:12 2023 -0600
+
+    Iniciando selector de graficos y listando por dias
+
+[33mcommit 468b71194e89f2afee61950a446eda5d57b0fdfd[m
+Author: YisusZA <jesuszacale11@gmail.com>
+Date:   Sun Jul 23 19:18:10 2023 -0600
+
+    Creación y diseño de la grafica de Dispersión ScatterPlot
+
+[33mcommit 566352b623c77e61a1d04658b5b047235cc321dd[m
+Author: YisusZA <jesuszacale11@gmail.com>
+Date:   Fri Jul 21 23:44:21 2023 -0600
+
+    Configuracion visual y de comportamiento del grafico lineal
+
+[33mcommit ed934c81cfea892756dc57c16b108ae119eee95a[m
+Author: YisusZA <jesuszacale11@gmail.com>
+Date:   Thu Jul 20 23:36:45 2023 -0600
+
+    Se agrego y configuro Selector de meses, agrupacion de categorias, limites a la agrupacion, indicadores de porcentajes, editar y borrar gastos y se inicio con el grafico lineal
+
+[33mcommit 04eec14144e05eb18669f89951fcf6ea4f79e5e3[m
+Author: YisusZA <jesuszacale11@gmail.com>
+Date:   Sun Jul 9 22:33:22 2023 -0600
+
+    Desglose de gastos, guardar y combinar las diferetes listas de datos
+
+[33mcommit ad6447641721e8a37f251297a1ee816565f276c6[m
+Author: YisusZA <jesuszacale11@gmail.com>
+Date:   Tue Jun 27 22:34:21 2023 -0600
+
+    Editar y guardar categorias, implementacion de Toast y ajuste de detalles visuales
+
+[33mcommit 92320a7328011a05a74f11675e6dedd3800f15e3[m
+Author: YisusZA <jesuszacale11@gmail.com>
+Date:   Mon Jun 26 23:07:52 2023 -0600
+
+    Guardar Categoria y Primera parde de Editar Categoria
+
+[33mcommit b05e8b0423e93b2aee2a768f732fd30fe96e7455[m
+Author: YisusZA <jesuszacale11@gmail.com>
+Date:   Sun Jun 25 15:40:55 2023 -0600
+
+    Agregar nueva categoria con las condiciones necesarias, se actualizara la version de Flutter
+
+[33mcommit 08376564448e9ba07b595ed17ebfdea33cc51842[m
+Merge: 6e3569b a0034d5
+Author: YisusZA <jesuszacale11@gmail.com>
+Date:   Wed Jun 21 23:27:21 2023 -0600
+
+    Merge branch 'main' of github.com:JesusZacarias/GastosApp
+    Haciendo Merge necesario
+
+[33mcommit 6e3569b5106c85dd07a54bb4fe7906febcb8544e[m
+Author: YisusZA <jesuszacale11@gmail.com>
+Date:   Wed Jun 21 23:25:47 2023 -0600
+
+    Prueba de conflictos
+
+[33mcommit a0034d5332d89d1ac4d7032c91ed897c3a270b9c[m
+Author: JesusZacarias <59021713+JesusZacarias@users.noreply.github.com>
+Date:   Wed Jun 21 23:24:37 2023 -0600
+
+    Update README.md
+
+[33mcommit 0deb3a6e2aca73c3543e4df9d6b910125736dbe9[m
+Author: YisusZA <jesuszacale11@gmail.com>
+Date:   Wed Jun 21 23:11:15 2023 -0600
+
+    Subiendo Proyecto

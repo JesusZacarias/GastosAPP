@@ -94,7 +94,7 @@ class _ChartPieState extends State<ChartPie> {
                 showLeaderLines: true,
                 leaderLineStyleSpec: charts.ArcLabelLeaderLineStyleSpec(
                     length: 15,
-                    color: charts.MaterialPalette.white,
+                    color: charts.ColorUtil.fromDartColor(Theme.of(context).dividerColor),
                     //grosor de la linea indicadora
                     thickness: 1),
                 //decora los labes que se encuentran fuera de la grafica

@@ -56,6 +56,18 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "ffi",
+      "rootUri": "file:///home/yisus_za/.pub-cache/hosted/pub.dev/ffi-2.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "file",
+      "rootUri": "file:///home/yisus_za/.pub-cache/hosted/pub.dev/file-6.1.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter",
       "rootUri": "file:///home/yisus_za/flutter/packages/flutter",
       "packageUri": "lib/",
@@ -164,16 +176,88 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "path_provider_linux",
+      "rootUri": "file:///home/yisus_za/.pub-cache/hosted/pub.dev/path_provider_linux-2.1.11",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "path_provider_platform_interface",
+      "rootUri": "file:///home/yisus_za/.pub-cache/hosted/pub.dev/path_provider_platform_interface-2.0.6",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "path_provider_windows",
+      "rootUri": "file:///home/yisus_za/.pub-cache/hosted/pub.dev/path_provider_windows-2.1.7",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
       "name": "percent_indicator",
       "rootUri": "file:///home/yisus_za/.pub-cache/hosted/pub.dev/percent_indicator-4.2.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
+      "name": "platform",
+      "rootUri": "file:///home/yisus_za/.pub-cache/hosted/pub.dev/platform-3.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "plugin_platform_interface",
+      "rootUri": "file:///home/yisus_za/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
       "name": "provider",
       "rootUri": "file:///home/yisus_za/.pub-cache/hosted/pub.dev/provider-6.0.5",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "shared_preferences",
+      "rootUri": "file:///home/yisus_za/.pub-cache/hosted/pub.dev/shared_preferences-2.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "shared_preferences_android",
+      "rootUri": "file:///home/yisus_za/.pub-cache/hosted/pub.dev/shared_preferences_android-2.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "shared_preferences_foundation",
+      "rootUri": "file:///home/yisus_za/.pub-cache/hosted/pub.dev/shared_preferences_foundation-2.3.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "shared_preferences_linux",
+      "rootUri": "file:///home/yisus_za/.pub-cache/hosted/pub.dev/shared_preferences_linux-2.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "shared_preferences_platform_interface",
+      "rootUri": "file:///home/yisus_za/.pub-cache/hosted/pub.dev/shared_preferences_platform_interface-2.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "shared_preferences_web",
+      "rootUri": "file:///home/yisus_za/.pub-cache/hosted/pub.dev/shared_preferences_web-2.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "shared_preferences_windows",
+      "rootUri": "file:///home/yisus_za/.pub-cache/hosted/pub.dev/shared_preferences_windows-2.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
     },
     {
       "name": "sky_engine",
@@ -242,13 +326,25 @@
       "languageVersion": "2.14"
     },
     {
+      "name": "win32",
+      "rootUri": "file:///home/yisus_za/.pub-cache/hosted/pub.dev/win32-5.0.6",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "xdg_directories",
+      "rootUri": "file:///home/yisus_za/.pub-cache/hosted/pub.dev/xdg_directories-1.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
       "name": "exp_app",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-07-21T03:39:29.660075Z",
+  "generated": "2023-07-29T04:15:15.442958Z",
   "generator": "pub",
   "generatorVersion": "3.0.6"
 }

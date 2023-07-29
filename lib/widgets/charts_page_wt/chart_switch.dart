@@ -16,7 +16,7 @@ class ChartSwitch extends StatelessWidget {
       case 'Gráfico Lineal' : return const ChartLine();
       case 'Gráfico Pie' : return const ChartPie();
       case 'Gráfico de Dispersión' : return const ChartScatterplot();
-      default : return const ChartLine();
+      default : return const ChartPie();
     }
   }
 }
