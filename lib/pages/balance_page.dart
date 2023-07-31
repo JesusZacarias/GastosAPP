@@ -1,6 +1,4 @@
 import 'dart:math';
-
-import 'package:exp_app/models/entries_model.dart';
 import 'package:exp_app/providers/expenses_provider.dart';
 import 'package:exp_app/utils/math_operations.dart';
 import 'package:exp_app/widgets/balance_page_wt/back_sheet.dart';
@@ -24,13 +22,11 @@ class _BalancePageState extends State<BalancePage> {
   void _listener() {
     setState(() {
       _offset = _scrollController.offset / 100;
-      print(_max);
     });
   }
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _scrollController.addListener(_listener);
     _max;
@@ -38,7 +34,6 @@ class _BalancePageState extends State<BalancePage> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     _scrollController.removeListener(_listener);
     _scrollController.dispose();

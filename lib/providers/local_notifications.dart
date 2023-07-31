@@ -8,7 +8,7 @@ class LocalNotifications {
 
   initialize() async {
     AndroidInitializationSettings _androidInit =
-        const AndroidInitializationSettings('@mipmap/balance');
+        const AndroidInitializationSettings('@mipmap/ic_launcher');
 
     InitializationSettings _initSetting = InitializationSettings(
       android: _androidInit,
@@ -37,7 +37,7 @@ class LocalNotifications {
     //Los titulos se muestran cuando se expande la notificación
     var bigImage = const BigPictureStyleInformation(
       DrawableResourceAndroidBitmap('@mipmap/money'),
-      largeIcon: DrawableResourceAndroidBitmap('@mipmap/balance'),
+      largeIcon: DrawableResourceAndroidBitmap('@mipmap/ic_launcher'),
       contentTitle: 'Es hora de registrar tus gastos',
       summaryText: 'No olvides registrar los gastos de hoy',
       htmlFormatContent: true,

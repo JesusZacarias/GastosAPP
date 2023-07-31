@@ -1,0 +1,12 @@
+net.wolverinebeach.flutter_timezone-jetified-window-java-1.0.0-beta04-0 /home/yisus_za/.gradle/caches/transforms-3/006d93cd422dbc43e89591147c2de572/transformed/jetified-window-java-1.0.0-beta04/res
+net.wolverinebeach.flutter_timezone-core-1.6.0-1 /home/yisus_za/.gradle/caches/transforms-3/4ca28c4a71705f8a687c69dda140a277/transformed/core-1.6.0/res
+net.wolverinebeach.flutter_timezone-jetified-annotation-experimental-1.1.0-2 /home/yisus_za/.gradle/caches/transforms-3/8965c941cf4bee4d72541b965c7c9d39/transformed/jetified-annotation-experimental-1.1.0/res
+net.wolverinebeach.flutter_timezone-jetified-window-1.0.0-beta04-3 /home/yisus_za/.gradle/caches/transforms-3/dee59bb480020f42d53c2ea15e4501f7/transformed/jetified-window-1.0.0-beta04/res
+net.wolverinebeach.flutter_timezone-main-4 /home/yisus_za/.pub-cache/hosted/pub.dev/flutter_timezone-1.0.7/android/src/main/res
+net.wolverinebeach.flutter_timezone-release-5 /home/yisus_za/.pub-cache/hosted/pub.dev/flutter_timezone-1.0.7/android/src/release/res
+net.wolverinebeach.flutter_timezone-pngs-6 /home/yisus_za/Proyectos/FlutterApp/exp_app/build/flutter_timezone/generated/res/pngs/release
+net.wolverinebeach.flutter_timezone-resValues-7 /home/yisus_za/Proyectos/FlutterApp/exp_app/build/flutter_timezone/generated/res/resValues/release
+net.wolverinebeach.flutter_timezone-rs-8 /home/yisus_za/Proyectos/FlutterApp/exp_app/build/flutter_timezone/generated/res/rs/release
+net.wolverinebeach.flutter_timezone-mergeReleaseResources-9 /home/yisus_za/Proyectos/FlutterApp/exp_app/build/flutter_timezone/intermediates/incremental/release/mergeReleaseResources/merged.dir
+net.wolverinebeach.flutter_timezone-mergeReleaseResources-10 /home/yisus_za/Proyectos/FlutterApp/exp_app/build/flutter_timezone/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+net.wolverinebeach.flutter_timezone-merged_res-11 /home/yisus_za/Proyectos/FlutterApp/exp_app/build/flutter_timezone/intermediates/merged_res/release

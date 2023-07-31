@@ -51,6 +51,7 @@ class _MyAppState extends State<MyApp> {
     return Consumer<ThemeProvider>(
       builder: (context, value, child) {
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'Material App',
           localizationsDelegates: const [
             GlobalMaterialLocalizations.delegate,

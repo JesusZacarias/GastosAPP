@@ -16,7 +16,6 @@ class _BsNumKeyboardState extends State<BsNumKeyboard> {
 
   @override
   void initState() {
-    // TODO: implement initState
     import = widget.cModel.amount.toStringAsFixed(2);
     super.initState();
   }
@@ -147,7 +146,7 @@ class _BsNumKeyboardState extends State<BsNumKeyboard> {
                               behavior: HitTestBehavior.opaque,
                               onTap: () {
                                 setState(() {
-                                  if (import != null && import.length > 0.0) {
+                                  if (import.length > 0.0) {
                                     import =
                                         import.substring(0, import.length - 1);
                                         _expensesChange(import);

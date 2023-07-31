@@ -1,0 +1,146 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.exp_app"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+11-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml:4:5-80
+11-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml:4:22-78
+12    <uses-permission android:name="android.permission.VIBRATE" />
+12-->[:flutter_local_notifications] /home/yisus_za/Proyectos/FlutterApp/exp_app/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:10:5-66
+12-->[:flutter_local_notifications] /home/yisus_za/Proyectos/FlutterApp/exp_app/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:10:22-63
+13    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+13-->[:flutter_local_notifications] /home/yisus_za/Proyectos/FlutterApp/exp_app/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:11:5-81
+13-->[:flutter_local_notifications] /home/yisus_za/Proyectos/FlutterApp/exp_app/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:11:22-78
+14    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+14-->[:flutter_local_notifications] /home/yisus_za/Proyectos/FlutterApp/exp_app/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:12:5-79
+14-->[:flutter_local_notifications] /home/yisus_za/Proyectos/FlutterApp/exp_app/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:12:22-76
+15    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+15-->[:flutter_local_notifications] /home/yisus_za/Proyectos/FlutterApp/exp_app/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:13:5-77
+15-->[:flutter_local_notifications] /home/yisus_za/Proyectos/FlutterApp/exp_app/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:13:22-74
+16
+17    <application
+18        android:name="android.app.Application"
+18-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml:8:9-42
+19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+19-->[androidx.core:core:1.6.0] /home/yisus_za/.gradle/caches/transforms-3/4ca28c4a71705f8a687c69dda140a277/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
+20        android:icon="@mipmap/ic_launcher"
+20-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml:9:9-43
+21        android:label="exp_app" >
+21-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml:7:9-32
+22        <receiver
+22-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml:11:9-15:20
+23            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver"
+23-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml:11:19-107
+24            android:exported="false" >
+24-->[:flutter_local_notifications] /home/yisus_za/Proyectos/FlutterApp/exp_app/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:24:13-37
+25            <intent-filter>
+25-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml:12:9-14:25
+26                <action android:name="android.intent.action.BOOT_COMPLETED" />
+26-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml:13:9-78
+26-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml:13:17-68
+27            </intent-filter>
+28            <intent-filter>
+28-->[:flutter_local_notifications] /home/yisus_za/Proyectos/FlutterApp/exp_app/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:25:13-30:29
+29                <action android:name="android.intent.action.BOOT_COMPLETED" />
+29-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml:13:9-78
+29-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml:13:17-68
+30                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+30-->[:flutter_local_notifications] /home/yisus_za/Proyectos/FlutterApp/exp_app/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:27:17-84
+30-->[:flutter_local_notifications] /home/yisus_za/Proyectos/FlutterApp/exp_app/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:27:25-81
+31                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+31-->[:flutter_local_notifications] /home/yisus_za/Proyectos/FlutterApp/exp_app/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:28:17-82
+31-->[:flutter_local_notifications] /home/yisus_za/Proyectos/FlutterApp/exp_app/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:28:25-79
+32                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+32-->[:flutter_local_notifications] /home/yisus_za/Proyectos/FlutterApp/exp_app/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:29:17-82
+32-->[:flutter_local_notifications] /home/yisus_za/Proyectos/FlutterApp/exp_app/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:29:25-79
+33            </intent-filter>
+34        </receiver>
+35        <receiver
+35-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml:16:9-106
+36            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver"
+36-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml:16:19-103
+37            android:exported="false" />
+37-->[:flutter_local_notifications] /home/yisus_za/Proyectos/FlutterApp/exp_app/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:21:13-37
+38
+39        <activity
+39-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml:18:9-38:20
+40            android:name="com.example.exp_app.MainActivity"
+40-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml:19:13-41
+41            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+41-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml:23:13-163
+42            android:exported="true"
+42-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml:20:13-36
+43            android:hardwareAccelerated="true"
+43-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml:24:13-47
+44            android:launchMode="singleTop"
+44-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml:21:13-43
+45            android:theme="@style/LaunchTheme"
+45-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml:22:13-47
+46            android:windowSoftInputMode="adjustResize" >
+46-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml:25:13-55
+47
+48            <!--
+49                 Specifies an Android theme to apply to this Activity as soon as
+50                 the Android process has started. This theme is visible to the user
+51                 while the Flutter UI initializes. After that, this theme continues
+52                 to determine the Window background behind the Flutter UI.
+53            -->
+54            <meta-data
+54-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml:30:13-33:17
+55                android:name="io.flutter.embedding.android.NormalTheme"
+55-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml:31:15-70
+56                android:resource="@style/NormalTheme" />
+56-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml:32:15-52
+57
+58            <intent-filter>
+58-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml:34:13-37:29
+59                <action android:name="android.intent.action.MAIN" />
+59-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml:35:17-68
+59-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml:35:25-66
+60
+61                <category android:name="android.intent.category.LAUNCHER" />
+61-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml:36:17-76
+61-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml:36:27-74
+62            </intent-filter>
+63        </activity>
+64        <!--
+65             Don't delete the meta-data below.
+66             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+67        -->
+68        <meta-data
+68-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml:41:9-43:33
+69            android:name="flutterEmbedding"
+69-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml:42:13-44
+70            android:value="2" />
+70-->/home/yisus_za/Proyectos/FlutterApp/exp_app/android/app/src/main/AndroidManifest.xml:43:13-30
+71
+72        <receiver
+72-->[:flutter_local_notifications] /home/yisus_za/Proyectos/FlutterApp/exp_app/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:16:9-18:40
+73            android:name="com.dexterous.flutterlocalnotifications.ActionBroadcastReceiver"
+73-->[:flutter_local_notifications] /home/yisus_za/Proyectos/FlutterApp/exp_app/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:17:13-91
+74            android:exported="false" />
+74-->[:flutter_local_notifications] /home/yisus_za/Proyectos/FlutterApp/exp_app/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:18:13-37
+75
+76        <uses-library
+76-->[androidx.window:window:1.0.0-beta04] /home/yisus_za/.gradle/caches/transforms-3/dee59bb480020f42d53c2ea15e4501f7/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+77            android:name="androidx.window.extensions"
+77-->[androidx.window:window:1.0.0-beta04] /home/yisus_za/.gradle/caches/transforms-3/dee59bb480020f42d53c2ea15e4501f7/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+78            android:required="false" />
+78-->[androidx.window:window:1.0.0-beta04] /home/yisus_za/.gradle/caches/transforms-3/dee59bb480020f42d53c2ea15e4501f7/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+79        <uses-library
+79-->[androidx.window:window:1.0.0-beta04] /home/yisus_za/.gradle/caches/transforms-3/dee59bb480020f42d53c2ea15e4501f7/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+80            android:name="androidx.window.sidecar"
+80-->[androidx.window:window:1.0.0-beta04] /home/yisus_za/.gradle/caches/transforms-3/dee59bb480020f42d53c2ea15e4501f7/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+81            android:required="false" />
+81-->[androidx.window:window:1.0.0-beta04] /home/yisus_za/.gradle/caches/transforms-3/dee59bb480020f42d53c2ea15e4501f7/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+82    </application>
+83
+84</manifest>

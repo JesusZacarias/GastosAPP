@@ -1,0 +1,4 @@
+#Sun Jul 30 22:15:23 CST 2023
+base.0=/home/yisus_za/Proyectos/FlutterApp/exp_app/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
